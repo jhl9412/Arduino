@@ -1,0 +1,23 @@
+#include <MsTimer2.h>
+
+void isr()
+{
+  static boolean state = HIGH;
+  digitalWrite(13, state);
+  state = !state;
+  
+}
+
+void setup() {
+  // put your setup code here, to run once:
+  MsTimer2::set(1000, isr);
+  MsTimer2::start();  
+  pinMode(13,OUTPUT);
+// 반복문을 안하고 있는데 계속 호출되고 있음. 인터럽트는 우선순위가 높기 때문에
+// 타이머가 우선순위를 가지고 있음. 
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
