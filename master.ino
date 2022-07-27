@@ -4,7 +4,8 @@
 #include <LiquidCrystal_I2C.h>
 #include <IRremote.h>
 #include <DHT.h>
-
+ 
+ 
 
 // 변수 선언
 
